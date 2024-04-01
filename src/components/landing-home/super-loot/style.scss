@@ -1,0 +1,155 @@
+@import "../../../styles/common";
+
+.super-loot-block {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #12713787;
+    z-index: -1;
+  }
+  video.bg-video {
+    z-index: -2;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    left: 0;
+    top: 0;
+  }
+  .drop__pack {
+    width: 50%;
+    display: block;
+    margin: auto;
+    @media screen and (max-width: 1023px) {
+      width: 80%;
+    }
+  }
+  .cube-image {
+    width: 100%;
+    max-width: 22rem;
+    display: table;
+    margin: auto;
+    position: relative;
+    top: 0rem;
+  }
+  .heading-block {
+    text-align: center;
+    h4 {
+      color: #1aff4f;
+      font-family: $nunito-sans;
+      margin: 0 !important;
+      font-size: 1.5rem;
+      &.Nfts {
+        margin-bottom: 2rem !important;
+        text-transform: initial;
+      }
+    }
+    h3 {
+      color: #ea337f;
+      font-family: $nunito-sans;
+      font-size: 4rem;
+      max-width: 15rem;
+      line-height: 0.8;
+      margin: 0 auto 0;
+      letter-spacing: 0.05rem;
+      text-shadow: -0.2rem 0 0 #1aff4f;
+    }
+  }
+  .loot-detail {
+    letter-spacing: 4.2px;
+    color: #ea337f;
+    max-width: 30rem;
+    margin: auto;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.3;
+    font-family: $nunito-sans;
+    padding: 0 1rem;
+  }
+  .waitlist {
+    background: transparent;
+    border: 2px solid #ea337f;
+    border-radius: 0;
+    color: #fff;
+    line-height: 1.1;
+    display: flex;
+    box-shadow: inset 0px 0px 6px 0px #ea337f !important;
+    font-family: $nunito-sans;
+    letter-spacing: 1px;
+    text-transform: var(--text-transform-upper);
+    padding: 0.6rem 1rem;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    transition: 0.3s all ease-in;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    max-width: 17rem;
+    margin-bottom: 4.5rem;
+    @media screen and (max-width: 480px) {
+      max-width: 20rem;
+    }
+    &:hover {
+      background: #ea337f;
+      color: #000;
+    }
+  }
+
+  .loot-description {
+    letter-spacing: 4.2px;
+    color: #ffffff;
+    max-width: 47rem;
+    margin: auto;
+    text-align: center;
+    font-size: 0.9rem;
+    line-height: 1.3;
+    padding: 0 1rem;
+    font-family: var(--ck-font-montserrat);
+    font-weight: 600;
+    margin-bottom: 2rem;
+    @media screen and (max-width: 480px) {
+      letter-spacing: 2.2px;
+      font-size: 0.8rem;
+      padding: 0 0rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+  }
+  .hint-name {
+    color: #ea337f;
+    letter-spacing: 3.2px;
+    max-width: 40rem;
+    margin: auto;
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 0 1rem;
+    font-family: var(--ck-font-montserrat);
+    font-weight: 600;
+    margin-bottom: 3rem;
+  }
+}
+
+.hit-the-drop {
+  color: #ffffff;
+  opacity: 0.46;
+  margin: 2rem 0;
+  .overlay {
+    display: none !important;
+  }
+  .marquee {
+    font-family: $nunito-sans;
+    min-width: auto;
+    font-size: 1.2rem;
+    letter-spacing: 0.08rem;
+  }
+}

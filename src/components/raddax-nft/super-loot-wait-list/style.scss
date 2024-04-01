@@ -1,0 +1,187 @@
+@import "../../../styles/common";
+
+.joinnow-section {
+  padding: 3rem 0;
+  position: relative;
+  background-position: top left;
+  background-size: cover;
+  color: #fff;
+  @media screen and (max-width: 767px) {
+    padding: 2rem 0;
+    position: relative;
+    background-position: top center;
+    background-size: cover;
+  }
+
+  &::before {
+    content: "";
+    background: linear-gradient(88deg, #361a86 8%, #ffeff7 90%);
+    background: linear-gradient(88deg, #361a8678 8%, #ffeff7 90%);
+    mix-blend-mode: multiply;
+    position: absolute;
+    inset: 0 0 0 0;
+    backdrop-filter: blur(0.3rem);
+  }
+  .joinnow-flex {
+    display: flex;
+    width: 100%;
+    padding-bottom: 0;
+    justify-content: center;
+    position: relative;
+    max-width: 85rem;
+    margin: auto;
+    align-items: flex-start;
+
+    @media screen and (max-width: 767px) {
+      align-items: center;
+      flex-direction: column;
+    }
+    .content-block {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      text-align: left;
+      margin: 0;
+      list-style: none;
+      flex-wrap: wrap;
+      width: 50%;
+      padding: 1rem;
+      @media screen and (max-width: 767px) {
+        width: 100%;
+        padding: 0;
+        max-width: 35rem;
+        margin-bottom: 0rem;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      h4 {
+        margin-bottom: 1rem;
+        font-family: $hubolt-sans-bold-narrow;
+        font-size: 1.5rem !important;
+        font-weight: 700;
+        @media screen and (max-width: 767px) {
+          text-align: center;
+          font-size: 1.1rem;
+        }
+      }
+      p {
+        font-size: 0.8rem;
+        font-weight: 400;
+        margin: 0;
+      }
+    }
+    .joinwaitlist-box {
+      width: 50%;
+      max-width: 24rem;
+      background: transparent;
+      padding: 1rem;
+      border-radius: 1rem;
+      @media screen and (max-width: 767px) {
+        width: 100%;
+      }
+      .join-waitlist-form-block {
+        margin: auto;
+        overflow: hidden;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h5 {
+          margin-bottom: 1rem;
+          font-weight: 400;
+        }
+        .join-waitlist-form {
+          display: flex;
+          align-items: flex-start;
+          justify-content: center;
+          overflow: hidden;
+          flex-direction: column;
+          width: 100%;
+          @media screen and (max-width: 767px) {
+            align-items: center;
+          }
+          .getappLinkCheckbox {
+            text-align: left;
+            font-size: 0.65rem;
+
+            input {
+              // height: 1rem;
+              padding: unset;
+              align-items: center;
+              margin-bottom: unset;
+              width: auto;
+              height: auto;
+              margin-right: 0.2rem;
+            }
+            .link {
+              cursor: pointer;
+              &.link-orange {
+                color: #e6d44c;
+                font-weight: 600;
+              }
+            }
+          }
+          input {
+            width: 100%;
+            margin-bottom: 0.5rem;
+            height: 2rem;
+            box-shadow: none !important;
+            background: transparent;
+            color: #fff;
+            border: 0.06rem solid #ffffff !important;
+            padding: 0.2rem 0.5rem;
+            outline: 0 !important;
+            font-size: 0.75rem !important;
+            border-radius: 0.3rem;
+            @media screen and (max-width: 767px) {
+              background: #00000078;
+              color: #fff;
+            }
+            &::placeholder {
+              color: #ffffff66;
+            }
+          }
+          button {
+            color: #fff;
+            display: block;
+            margin: 0 0.3rem 0;
+            transition: 0.3s;
+            position: relative;
+            text-transform: capitalize;
+            background: #ea337f;
+            border: solid 1px transparent;
+            border-radius: 0.3rem;
+            font-weight: 600;
+            padding: 0.2rem 1rem;
+            font-size: 0.75rem;
+            @media screen and (max-width: 767px) {
+              width: 100%;
+            }
+            &:hover,
+            &:focus,
+            &:active {
+              border: solid 1px #ea337f !important;
+              background: transparent;
+              color: #ea337f !important;
+            }
+          }
+        }
+        .success-message {
+          width: 100%;
+          text-align: left;
+          color: #fff;
+          padding: 0.4rem;
+          padding: 0rem 0.3rem;
+          margin-bottom: 0.5rem;
+          font-size: 0.65rem;
+          a {
+            text-decoration: underline;
+            color: #ea337f;
+          }
+        }
+      }
+    }
+  }
+}

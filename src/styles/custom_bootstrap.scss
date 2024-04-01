@@ -1,0 +1,148 @@
+$dark: #000000;
+$secondary: #9c9c9b;
+$danger: #f21e00;
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+:root {
+  --ck-theme: #ec7c49;
+  --ck-grey: #cccccc;
+  --ck-black: #000000;
+  --ck-white: #ffffff;
+  --ck-dark: #020c0f;
+  --white: #fff;
+  --theme-green: #000000;
+  --theme-yellow: #ea337f;
+  --theme-secondary-green: #b3c300;
+  --theme-dark-green: #091d15;
+  --ck-font-montserrat: "Montserrat", sans-serif;
+  --bs-gradient: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0)
+  );
+  --ck-heading-1: 6rem;
+  --ck-heading-2: 4rem;
+  --ck-heading-3: 2.5rem;
+  --ck-heading-4: 3rem;
+  --ck-heading-5: 2rem;
+  --ck-heading-6: 1.5rem;
+  --ck-paragraph: 1.1rem;
+  --ck-line-height: 1.5;
+  --ck-border-radius: 20px;
+  --ck-button-background: #000;
+  --ck-button-color: #fff;
+  --ck-button-border-radius: 100px;
+  --ck-glass-background: rgba(245, 245, 247, 0.72);
+  --ck-backdrop-filter: blur(20px);
+  --ck-glass-border: 2px solid rgba(255, 255, 255, 0.1);
+  --ck-glass-box-shadow: 0 0 40px rgb(9 44 55);
+  --ck-nav-text-size: 1rem;
+  --ck-margin-zero: 0rem;
+  --ck-font-size: 1rem;
+  --font-weight-400: 400;
+  --font-weight-500: 500;
+  --font-weight-600: 600;
+  --font-weight-700: 700;
+  --font-weight-800: 800;
+  --text-transform-upper: uppercase;
+  --ck-letter-spacing: 0.5px;
+  --ck-subtitle: 2rem;
+  --ck-section-padding: 5rem 0;
+  --ck-drop-gradient: linear-gradient(
+    -70deg,
+    rgba(151, 223, 95, 1) 0%,
+    rgba(106, 226, 139, 1) 50%,
+    rgba(13, 226, 171, 1) 100%
+  );
+  --impact: "Impact", sans-serif;
+  --helvetica: "HelveticaNeue1", sans-serif;
+  --helvetica1: "HelveticaNeue2", sans-serif;
+}
+hr {
+  margin: 0.4rem 0;
+}
+.container-fluid {
+  padding: 0 2rem !important;
+}
+
+@media screen and (max-width: 7066px) {
+  html {
+    font-size: 100px !important;
+  }
+}
+@media screen and (max-width: 6066px) {
+  html {
+    font-size: 80px !important;
+  }
+}
+@media screen and (max-width: 5066px) {
+  html {
+    font-size: 70px !important;
+  }
+}
+
+@media screen and (max-width: 4066px) {
+  html {
+    font-size: 60px !important;
+  }
+}
+@media screen and (max-width: 3566px) {
+  html {
+    font-size: 40px !important;
+  }
+}
+
+@media screen and (max-width: 3066px) {
+  html {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 2560px) {
+  html {
+    font-size: 36px !important;
+  }
+}
+@media screen and (max-width: 2140px) {
+  html {
+    font-size: 31px !important;
+  }
+}
+@media screen and (max-width: 1920px) {
+  html {
+    font-size: 26px !important;
+  }
+}
+@media screen and (max-width: 1536px) {
+  html {
+    font-size: 24px !important;
+  }
+}
+@media screen and (max-width: 1440px) {
+  html {
+    font-size: 22px !important;
+  }
+}
+@media screen and (max-width: 1366px) {
+  html {
+    font-size: 20px !important;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 20px !important;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  html {
+    font-size: 18px !important;
+  }
+}
+@media screen and (max-width: 320px) {
+  html {
+    font-size: 16px !important;
+  }
+}

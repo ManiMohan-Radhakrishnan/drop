@@ -1,0 +1,55 @@
+@import "../../../styles/common";
+
+.our-teambeyond-section {
+  position: relative;
+  display: block;
+  padding: 3rem 0 3rem;
+  min-height: auto;
+  overflow: hidden;
+  background: #000 linear-gradient(108deg, #34268d59 0%, #a5207c59 100%) 0% 0%
+    no-repeat padding-box;
+  .sectionHeading {
+    font-family: $hubolt-sans-bold-narrow;
+    font-size: 1.8rem !important;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin: 0 0 1rem;
+    line-height: 1.35;
+    letter-spacing: 0.08rem;
+  }
+
+  .our-teambeyond-desc {
+    color: #000000;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    max-width: 38rem;
+    text-align: center;
+    margin: 0 auto 3rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.08rem;
+  }
+
+  .cmp_logo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 60%;
+    margin: 1rem auto 0;
+
+    img {
+      width: 33.33%;
+      object-fit: contain;
+      object-position: center;
+      opacity: 0.8;
+      padding: 0.5rem 1rem;
+      margin: 1rem 0;
+      @media screen and (max-width: 767px) {
+        width: 50%;
+      }
+    }
+  }
+}

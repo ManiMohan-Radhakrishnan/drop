@@ -1,0 +1,495 @@
+@import "../../../styles/common";
+
+.main-loot-section-four {
+  display: block;
+  position: relative;
+  padding: 5rem 0;
+  background: #000;
+  color: #fff;
+
+  .header-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #b1b1b1;
+    font-size: 0.8rem;
+    flex-direction: column;
+    max-width: 40rem;
+    margin: 0 auto 2rem;
+
+    h2 {
+      font-weight: 700;
+      font-family: $hubolt-sans-bold-narrow;
+      font-size: 1.8rem;
+      letter-spacing: 0.08rem;
+    }
+
+    p {
+      color: #ffffff;
+      font-size: 0.85rem;
+    }
+  }
+
+  .loot-block {
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    @media screen and (max-width: 840px) {
+      flex-direction: column-reverse;
+    }
+
+    .loot-section {
+      width: 50%;
+      display: grid;
+      background: #000;
+      border: 1px solid #7d2282;
+      grid-template-areas:
+        "one one"
+        "two two"
+        "three four";
+      // "five six";
+      @media screen and (max-width: 840px) {
+        width: 100%;
+        text-align: center;
+      }
+
+      .items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 1rem;
+
+        .bat-title {
+          color: #ffdd98;
+        }
+
+        h2 {
+          font-size: 1.2rem;
+          width: 100%;
+          font-weight: 600;
+          color: #fff;
+          text-transform: uppercase;
+
+          @media screen and (max-width: 840px) {
+            text-align: center;
+          }
+        }
+
+        p {
+          color: #b1b1b1;
+
+          font-size: 0.7rem;
+
+          @media screen and (max-width: 840px) {
+            text-align: center;
+          }
+        }
+
+        .box-block {
+          h6 {
+            color: #ffffff;
+            font-size: 0.85rem;
+            font-weight: 400;
+            margin-bottom: 0.3rem;
+
+            &.mini-font {
+              margin: 0;
+
+              font-size: 60%;
+            }
+          }
+
+          h5 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin: 0.8rem 0;
+          }
+
+          h4 {
+            color: #ffffff;
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 0;
+
+            &.theme-yellow-text {
+              color: #e6d44d;
+            }
+
+            @media screen and (max-width: 1024px) {
+              font-size: 0.8rem;
+              white-space: nowrap;
+            }
+
+            @media screen and (max-width: 375px) {
+              font-size: 0.8rem;
+              white-space: unset;
+            }
+
+            &.pack-price {
+              color: #ffdd98;
+              font-weight: 600;
+              font-size: 2.2rem;
+
+              span {
+                color: rgba(235, 235, 235, 0.8);
+
+                font-weight: 500;
+                font-size: 2.2rem;
+                align-items: center;
+                text-align: center;
+
+                s {
+                  text-decoration-color: #ff5555;
+                }
+              }
+            }
+
+            &.pack-count {
+              color: #ffdd98;
+              font-weight: 600;
+              font-size: 1.2rem;
+            }
+          }
+
+          .loot-desc {
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 0;
+            line-height: 1.3;
+            margin-top: 0.5rem;
+            // @media screen and (max-width: 991px) {
+            //   font-size: 1.2rem;
+            // }
+            // @media screen and (max-width: 840px) {
+            //   font-size: 1.4rem;
+            //   font-weight: 600;
+            // }
+          }
+        }
+
+        &.one {
+          grid-area: one;
+          border-bottom: 1px solid #7d2282;
+          align-items: flex-start;
+          text-align: left;
+
+          @media screen and (max-width: 840px) {
+            text-align: center;
+          }
+        }
+
+        &.two {
+          grid-area: two;
+          border-bottom: 1px solid #7d2282;
+        }
+
+        &.three {
+          grid-area: three;
+          border-right: 1px solid #7d2282;
+          border-bottom: 1px solid #7d2282;
+        }
+
+        &.four {
+          grid-area: four;
+          border-bottom: 1px solid #7d2282;
+        }
+
+        &.five {
+          grid-area: five;
+          border-right: 1px solid #7d2282;
+        }
+
+        &.six {
+          grid-area: six;
+        }
+
+        &.seven {
+          grid-area: seven;
+          border-top: 1px solid #7d2282;
+        }
+
+        &.eight {
+          grid-area: eight;
+          border-top: 1px solid #7d2282;
+        }
+
+        // &.seven {
+        //   grid-area: five;
+        //   border-top: 1px solid #7d2282;
+        // }
+      }
+    }
+
+    .pack-section {
+      background: #000;
+      backdrop-filter: blur(15px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      border: 1px solid #7d2282;
+      width: 50%;
+      padding: 0.8rem;
+      border-left: none;
+
+      @media screen and (max-width: 840px) {
+        width: 100%;
+        border: 1px solid #7d2282;
+        border-bottom: none;
+      }
+      .pack-video-block {
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(3deg, #000000ed 13%, transparent 58%);
+        }
+      }
+      .pack-image {
+        max-width: 25rem;
+        height: auto;
+        width: 100%;
+        margin-bottom: 0.8rem;
+        border-radius: 1rem;
+      }
+
+      h6 {
+        color: #ffffff;
+        font-size: 0.8rem;
+        font-weight: 400;
+        margin-bottom: 0.3rem;
+      }
+
+      h4 {
+        color: #ffffff;
+        font-size: 1rem;
+        font-weight: 700;
+        margin-bottom: 0;
+      }
+
+      .coins-section {
+        margin-top: 1rem;
+        display: flex;
+        gap: 1rem;
+
+        @media screen and (max-width: 840px) {
+          margin-top: 1rem;
+          display: flex;
+          gap: 1rem;
+          margin-bottom: 1.4rem;
+        }
+
+        .coin-image {
+          padding: 1rem;
+          border: 1px dashed #ffdd98;
+          border-radius: 4rem;
+          width: 2rem;
+          height: 2rem;
+        }
+      }
+
+      .tap_play {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        width: 7rem;
+        overflow: hidden;
+        transition: 0.3s all ease;
+        animation: tapPlayBtnAnimation 3s infinite;
+
+        .tap_play_btn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0 !important;
+          padding: 0.3rem 1rem;
+          background: #1d1c2c !important;
+          color: #fff;
+          border: 0rem solid #000;
+          border-radius: 50rem;
+          font-weight: 600;
+          width: 100%;
+          font-size: 0.8rem;
+          white-space: nowrap;
+
+          svg {
+            margin-right: 0.5rem;
+            color: #c3c3c3;
+            border-radius: 50rem;
+            line-height: 1.6;
+            font-size: 0.9rem;
+          }
+        }
+      }
+
+      .collection-btn {
+        display: flex;
+        flex-direction: column;
+
+        a {
+          padding: 0.5rem 1.5rem !important;
+          border: 1px solid #48094c !important;
+          margin: 0.4rem 0;
+          min-width: 4rem;
+          text-align: center;
+          text-transform: uppercase;
+          position: relative;
+          transition: all 0.4s ease-in-out;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 0.6rem;
+
+          border-radius: 0.4rem;
+          font-weight: 700;
+          background: #ea337f;
+          color: #ffffff;
+          user-select: none;
+
+          &:hover {
+            background: #210d22;
+            color: #ea337f;
+          }
+
+          &:last-child {
+            background-color: transparent;
+            color: var(--ck-white);
+            margin-right: 0px;
+
+            &:hover {
+              background: #ea337f;
+              color: #ffffff;
+            }
+          }
+          &:first-child {
+            background: #ea337f;
+            color: #ffffff;
+            margin-right: 0px;
+
+            &:hover {
+              background-color: transparent;
+              color: var(--ck-white);
+            }
+          }
+          &.disabled {
+            background: #ea337f;
+            color: #ffffff;
+            pointer-events: none;
+            opacity: 0.3;
+            cursor: default;
+
+            &:hover {
+              background: #210d22;
+              color: #ea337f;
+            }
+          }
+        }
+      }
+
+      &.cursor-pointer {
+        cursor: pointer;
+      }
+    }
+  }
+
+  @keyframes tapPlayBtnAnimation {
+    0% {
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 0.5;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  .theme-btn {
+    color: #fff;
+    display: inline-block;
+    margin: 0 0.3rem 0;
+    padding: 0.4rem 1.5rem;
+    transition: 0.3s;
+    position: relative;
+    text-transform: capitalize;
+    font-size: 1rem;
+    border: solid 0.1rem #fff;
+    border-radius: 50rem;
+    //font-family: $proxima-nova;
+    font-weight: 600;
+    padding: 1rem 1.8rem;
+    font-size: 1.5rem;
+    background: #de6f00;
+
+    &:hover,
+    &:focus,
+    &:active {
+      border: solid 0.1rem #de6f00;
+      background: #fff;
+      color: #de6f00;
+    }
+
+    &:disabled {
+      background: #ea337f;
+      color: #ffffff;
+      border: none;
+      opacity: 0.6;
+    }
+
+    span {
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  .pre-book-btn {
+    color: #fff;
+    display: inline-block;
+    margin: 0 0.3rem 0;
+    padding: 0.4rem 1.5rem;
+    transition: 0.3s;
+    position: relative;
+    text-transform: capitalize;
+    font-size: 1rem;
+    border: solid 0.1rem #fff;
+    border-radius: 50rem;
+    //font-family: $proxima-nova;
+    font-weight: 600;
+    padding: 1rem 3.5rem;
+    font-size: 1.5rem;
+    background: #de6f00;
+
+    &:hover,
+    &:focus,
+    &:active {
+      border: solid 0.1rem #de6f00;
+      background: #fff;
+      color: #de6f00;
+    }
+
+    &:disabled {
+      background: #595959;
+      color: #b7aaaa;
+      border: none;
+      opacity: 0.6;
+    }
+
+    span {
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  .one-link {
+    color: #ea337f !important;
+  }
+}

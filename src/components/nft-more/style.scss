@@ -1,0 +1,177 @@
+@import "../../styles/common";
+
+.nft-more {
+  position: relative;
+
+  .title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    position: relative;
+
+    .title-count {
+      font-size: 1rem;
+      font-weight: 800;
+      top: 0;
+      width: 0;
+      position: absolute;
+      margin-left: 0.2rem;
+    }
+  }
+  .nft-more-content {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    font-weight: 600;
+    min-width: 100%;
+
+    .more-card {
+      margin-right: 1rem;
+      margin-bottom: 2rem;
+      min-width: 100%;
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      .nft-type-badge {
+        position: absolute;
+        top: 23rem;
+        left: 0;
+        background: #000;
+        color: #fff;
+        padding: 0;
+        font-size: 1rem;
+        border-radius: 0 20px 20px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 3rem;
+        min-width: 7rem;
+        padding: 0 1.5rem;
+        font-weight: 800;
+        box-shadow: 1px 1px 0px 1px #ffff;
+      }
+      @media screen and (max-width: 559px) {
+        min-width: 100%;
+        max-width: 100%;
+      }
+      @media screen and (min-width: 560px) {
+        min-width: calc(50% - 1rem);
+        max-width: calc(50% - 1rem);
+      }
+      @media screen and (min-width: 992px) {
+        min-width: calc(33.3333% - 1rem);
+        max-width: calc(33.3333% - 1rem);
+      }
+      @media screen and (min-width: 1024px) {
+        min-width: calc(25% - 1rem);
+        max-width: calc(25% - 1rem);
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+      img {
+        min-width: 100%;
+        height: 28rem;
+        object-fit: contain;
+        margin-bottom: 1rem;
+      }
+
+      .more-nft-title {
+        font-size: 1.8rem;
+        font-weight: 800;
+        position: relative;
+        display: flex;
+        align-items: center;
+        .right-content {
+          width: calc(100% - 8rem);
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        .left-count {
+          // position: absolute;
+          color: #f21e00;
+          right: 0;
+          font-weight: 800;
+          font-size: 1rem;
+          top: 0.5em;
+          width: 8rem;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+        }
+      }
+      .more-nft-desc {
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+      .more-bid-details {
+        display: flex;
+        justify-content: space-between;
+
+        .mb-title {
+          font-size: 1.2rem;
+          font-weight: 800;
+        }
+
+        .mb-value {
+          font-size: 1.3rem;
+          font-weight: 800;
+        }
+      }
+    }
+  }
+
+  .chevron-left-nav {
+    position: absolute;
+    top: 40%;
+    background-color: white;
+    padding: 0.7rem;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    left: 0;
+
+    svg {
+      height: 30px;
+      width: 33px;
+    }
+
+    &:hover {
+      opacity: 1;
+      box-shadow: 0 0 6px 0px #dadada;
+    }
+  }
+
+  .chevron-right-nav {
+    position: absolute;
+    top: 40%;
+    background-color: white;
+    padding: 0.7rem;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    right: 0;
+
+    svg {
+      height: 30px;
+      width: 33px;
+    }
+
+    &:hover {
+      opacity: 1;
+      box-shadow: 0 0 6px 0px #dadada;
+    }
+  }
+}
+.font-onerem {
+  font-size: 1.3rem !important;
+}
+.nft-more .nft-more-content .more-card .more-bid-details .mb-title {
+  font-family: "neue_helveticaroman" !important;
+}
