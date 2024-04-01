@@ -1,129 +1,114 @@
-import React, { useState, useRef, useEffect } from 'react'
-import { Modal } from 'react-bootstrap'
-import Image from 'react-bootstrap/Image'
-import { BiLoaderAlt } from 'react-icons/bi'
-import { Button, Form } from 'react-bootstrap'
-import { HiOutlineArrowRight } from 'react-icons/hi'
-import {
-  FaTelegramPlane,
-  FaDiscord,
-  FaInstagram,
-  FaMediumM,
-  FaFacebookF,
-  FaTwitter,
-  FaYoutube,
-} from 'react-icons/fa'
+import React, { useState, useRef, useEffect } from "react";
+import { Modal } from "react-bootstrap";
 
-import one from '../../images/drops/animation_box.gif'
-import two from '../../images/drops/treasure_3.jpg'
-import { sendEmailNewletter } from '../../api/axios-newsletter'
-import { currencyFormat, validateEmail } from './../../utils/common'
-import { treasureList, treasureClaim } from '../../api/base-methods'
-import NFTCounter from '../nft-counter'
+import one from "../../images/drops/animation_box.gif";
+import two from "../../images/drops/treasure_3.jpg";
+import { currencyFormat } from "./../../utils/common";
+import { treasureList, treasureClaim } from "../../api/base-methods";
+import NFTCounter from "../nft-counter";
 
-import tesla from '../../images/treasure/tesla.gif'
-import btc from '../../images/treasure/btc.gif'
-import eth from '../../images/treasure/eth.gif'
-import sand from '../../images/treasure/sand.gif'
-import shiba from '../../images/treasure/shiba.gif'
-import mana from '../../images/treasure/mana.gif'
-import inr from '../../images/treasure/mana.gif'
+import tesla from "../../images/treasure/tesla.gif";
+import btc from "../../images/treasure/btc.gif";
+import eth from "../../images/treasure/eth.gif";
+import sand from "../../images/treasure/sand.gif";
+import shiba from "../../images/treasure/shiba.gif";
+import mana from "../../images/treasure/mana.gif";
+import inr from "../../images/treasure/mana.gif";
 
-import './style.scss'
-import { Link, useParams } from 'react-router-dom'
-import { useSelector } from 'react-redux'
-import { toast } from 'react-toastify'
+import "./style.scss";
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const MyTreasureBox = ({ started = true }) => {
-  const r_email = useRef(null)
-  const state = useSelector((state) => state)
+  const r_email = useRef(null);
+  const state = useSelector((state) => state);
 
-  const { user } = state
-  const slug = user.data.user ? user.data.user.slug : null
+  const { user } = state;
+  const slug = user.data.user ? user.data.user.slug : null;
   // const { slug } = useParams();
 
-  const [modal, setModal] = useState(false)
-  const [email, setEmail] = useState()
-  const [email2, setEmail2] = useState()
-  const [loading, setLoading] = useState(false)
-  const [loading2, setLoading2] = useState(false)
-  const [loading3, setLoading3] = useState(false)
-  const [vEmail, setVEmail] = useState()
-  const [vEmail2, setVEmail2] = useState()
+  const [modal, setModal] = useState(false);
+  const [email, setEmail] = useState();
+  const [email2, setEmail2] = useState();
+  const [loading, setLoading] = useState(false);
+  const [loading2, setLoading2] = useState(false);
+  const [loading3, setLoading3] = useState(false);
+  const [vEmail, setVEmail] = useState();
+  const [vEmail2, setVEmail2] = useState();
 
-  const [perkList, setPerkList] = useState([])
+  const [perkList, setPerkList] = useState([]);
 
-  const [trigger, setTrigger] = useState(false)
+  const [trigger, setTrigger] = useState(false);
 
   useEffect(() => {
-    getTreasureList(slug)
-  }, [slug])
+    getTreasureList(slug);
+  }, [slug]);
 
   const getTreasureList = async () => {
     try {
-      setLoading3(true)
-      const result = await treasureList('5Ew94W79IYgvxkDb')
-      setLoading3(false)
+      setLoading3(true);
+      const result = await treasureList("5Ew94W79IYgvxkDb");
+      setLoading3(false);
 
-      setPerkList(result.data.data.user_treasures)
+      setPerkList(result.data.data.user_treasures);
     } catch (error) {
-      setLoading3(false)
+      setLoading3(false);
       console.log(
-        '🚀 ~ file: index.js ~ line 43 ~ getTreasureList ~ error',
-        error,
-      )
+        "🚀 ~ file: index.js ~ line 43 ~ getTreasureList ~ error",
+        error
+      );
     }
-  }
+  };
 
   const handleClaimTreasure = async (slug) => {
     try {
-      const result = await treasureClaim(slug.slug, '5Ew94W79IYgvxkDb')
-      getTreasureList()
+      const result = await treasureClaim(slug.slug, "5Ew94W79IYgvxkDb");
+      getTreasureList();
       // toast.success("UnBoxed successfully");
     } catch (error) {
       console.log(
-        '🚀 ~ file: index.js ~ line 130 ~ handleClaimTreasure ~ error',
-        error,
-      )
+        "🚀 ~ file: index.js ~ line 130 ~ handleClaimTreasure ~ error",
+        error
+      );
     }
-  }
+  };
 
   const getEndTime = (input_date) => {
     // var offset = new Date().getTimezoneOffset();
-    var s_date = new Date(input_date)
+    var s_date = new Date(input_date);
     // s_date.setMinutes(s_date.getMinutes() - offset);
 
-    return s_date
-  }
+    return s_date;
+  };
 
   const getNow = () => {
-    var s_time = new Date()
+    var s_time = new Date();
 
-    s_time.setSeconds(s_time.getSeconds() + 2)
+    s_time.setSeconds(s_time.getSeconds() + 2);
 
-    return s_time
-  }
+    return s_time;
+  };
 
   const getLogo = (name) => {
     switch (name) {
-      case 'TESLA SHARE':
-        return tesla
-      case 'ETH':
-        return eth
-      case 'BTC':
-        return btc
-      case 'SHIB':
-        return shiba
-      case 'MANA':
-        return mana
-      case 'SAND':
-        return sand
-      case 'INR':
-        return inr
+      case "TESLA SHARE":
+        return tesla;
+      case "ETH":
+        return eth;
+      case "BTC":
+        return btc;
+      case "SHIB":
+        return shiba;
+      case "MANA":
+        return mana;
+      case "SAND":
+        return sand;
+      case "INR":
+        return inr;
       default:
-        return shiba
+        return shiba;
     }
-  }
+  };
 
   return (
     <>
@@ -143,20 +128,20 @@ const MyTreasureBox = ({ started = true }) => {
                     Goodness".
                   </h3>
                   <h5>
-                    Visit the Rewards section under{' '}
+                    Visit the Rewards section under{" "}
                     <Link
                       to="#"
                       onClick={() =>
                         window.open(
                           `${process.env.REACT_APP_ACCOUNTS_URL}/accounts/wallet`,
-                          '_self',
+                          "_self"
                         )
                       }
                       target="_blank"
                       className="color"
                     >
                       My GuardianLink Wallet
-                    </Link>{' '}
+                    </Link>{" "}
                     to redeem the coin rewards you unlock from the Treasure Box.
                   </h5>
                 </div>
@@ -169,7 +154,7 @@ const MyTreasureBox = ({ started = true }) => {
                 <>
                   {perkList.length > 0 &&
                     getEndTime(perkList[0].expire_at) > getNow() && (
-                      <div style={{ display: 'none' }}>
+                      <div style={{ display: "none" }}>
                         <NFTCounter
                           time={getEndTime(perkList[0].expire_at)}
                           handleEndEvent={() => setTrigger(!trigger)}
@@ -187,7 +172,7 @@ const MyTreasureBox = ({ started = true }) => {
                         <>
                           {obj.assert_name ? (
                             <div className="gift_info">
-                              {obj?.assert_type === 'nft' ? (
+                              {obj?.assert_type === "nft" ? (
                                 <>
                                   <img
                                     src={obj.nft_image}
@@ -203,27 +188,27 @@ const MyTreasureBox = ({ started = true }) => {
                                 </>
                               )}
 
-                              {obj?.assert_type === 'nft' ? (
+                              {obj?.assert_type === "nft" ? (
                                 <>
                                   <h3>{`${obj.assert_name}`}</h3>
                                 </>
                               ) : (
                                 <>
                                   <h3>
-                                    {`${obj.value}`}{' '}
-                                    {obj.assert_name !== 'BTC' ||
-                                    obj.assert_name !== 'ETH'
+                                    {`${obj.value}`}{" "}
+                                    {obj.assert_name !== "BTC" ||
+                                    obj.assert_name !== "ETH"
                                       ? `${obj.assert_name} ${
                                           parseInt(obj?.value) > 1
-                                            ? 'COINS'
-                                            : 'COIN'
+                                            ? "COINS"
+                                            : "COIN"
                                         }`
                                       : obj.assert_name}
                                   </h3>
                                 </>
                               )}
 
-                              {obj?.assert_type === 'nft' && <h3>1 NFT</h3>}
+                              {obj?.assert_type === "nft" && <h3>1 NFT</h3>}
                               {/* {obj.perk.name === "TESLA SHARE" ? (
                                 <>
                                   <h3>{obj.value}</h3> <h3>TESLA SHARE</h3>
@@ -231,8 +216,8 @@ const MyTreasureBox = ({ started = true }) => {
                               ) : (
                                 <h3>{`${obj.value} ${obj.perk.name}`}</h3>
                               )} */}
-                              {obj?.assert_type === 'token' && (
-                                <p>{currencyFormat(obj.usd_value, 'USD')}</p>
+                              {obj?.assert_type === "token" && (
+                                <p>{currencyFormat(obj.usd_value, "USD")}</p>
                               )}
                               {/* <p>{obj.perk.details}</p> */}
 
@@ -277,7 +262,7 @@ const MyTreasureBox = ({ started = true }) => {
                                     </button>
                                   </>
                                 ) : (
-                                  ''
+                                  ""
                                 )}
                                 {/* <button
                                   type="button"
@@ -351,7 +336,7 @@ const MyTreasureBox = ({ started = true }) => {
         </Modal.Body>
       </Modal>
     </>
-  )
-}
+  );
+};
 
-export default MyTreasureBox
+export default MyTreasureBox;
