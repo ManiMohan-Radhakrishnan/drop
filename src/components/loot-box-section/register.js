@@ -461,11 +461,7 @@ const Register = ({
                 <a
                   className="link link-blue forgot-password"
                   target="_blank"
-                  onClick={() =>
-                    window.open(
-                      `${process.env.REACT_APP_MARKETPLACE_URL}/terms-and-conditions`
-                    )
-                  }
+                  href={`${process.env.REACT_APP_MARKETPLACE_URL}/terms-and-conditions`}
                   rel="noreferrer"
                 >
                   Terms & Conditions.
