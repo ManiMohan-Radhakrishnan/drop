@@ -1,4 +1,3 @@
-import { atcb_action } from "add-to-calendar-button";
 import React from "react";
 import { useRef } from "react";
 import { BsFillCalendarPlusFill } from "react-icons/bs";
@@ -28,7 +27,7 @@ const AddtoCalendar = ({
           ref={atcb_ref}
           id="atc-button"
           className="add-calendar"
-          onClick={() => atcb_action(config, atcb_ref?.current)}
+          // onClick={() => atcb_action(config, atcb_ref?.current)}
         >
           <BsFillCalendarPlusFill />{" "}
           <span className="mr-5">ADD TO CALENDAR</span>
