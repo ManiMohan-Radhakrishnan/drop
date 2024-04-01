@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 import useQuery from "../../hook/useQuery";
 
 export const MODAL_TYPES = Object.freeze({
-  LOGIN_WITH_PASSWORD: "login_with_passwordASDASD",
+  LOGIN_WITH_PASSWORD: "login_with_password",
   LOGIN_WITH_OTP: "login_with_otp",
   VERIFY_GOOGLE_OTP: "verify_google_otp",
   VERIFY_OTP: "verify_otp",
