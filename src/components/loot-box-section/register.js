@@ -41,7 +41,7 @@ const Register = ({
   const [captcha, setCaptcha] = useState(false);
   const [password, setPassword] = useState(true);
   const [registerSuccess, setRegisterSuccess] = useState(false);
-  const [referralError, setReferralError] = useState("");
+  // const [referralError, setReferralError] = useState("");
   const [registerInfo, setRegisterInfo] = useState({
     first_name: "",
     last_name: "",
@@ -218,9 +218,9 @@ const Register = ({
               "This Email is already associated with a GuardianLink ID. Please Login or use a different email to Register."
             );
           }
-          if (err?.response?.data?.error_code === 2) {
-            setReferralError("You have entered an invaild invite code");
-          }
+          // if (err?.response?.data?.error_code === 2) {
+          //   setReferralError("You have entered an invaild invite code");
+          // }
           if (err?.response?.data?.error_code === 3)
             setPhoneNumberError("Phone number has already been taken");
         } else {
