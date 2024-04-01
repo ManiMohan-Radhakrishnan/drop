@@ -28,13 +28,7 @@ const MyTreasureBox = ({ started = true }) => {
   // const { slug } = useParams();
 
   const [modal, setModal] = useState(false);
-  const [email, setEmail] = useState();
-  const [email2, setEmail2] = useState();
-  const [loading, setLoading] = useState(false);
-  const [loading2, setLoading2] = useState(false);
   const [loading3, setLoading3] = useState(false);
-  const [vEmail, setVEmail] = useState();
-  const [vEmail2, setVEmail2] = useState();
 
   const [perkList, setPerkList] = useState([]);
 
