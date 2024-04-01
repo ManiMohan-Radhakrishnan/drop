@@ -492,7 +492,7 @@ const Register = ({
                 {/* <FacebookLogin /> */}
               </div>
             </div>
-            <p className="text-dark text-center agree-hint">
+            {/* <p className="text-dark text-center agree-hint">
               <span>Already have a GuardianLink ID ? </span>
               <a
                 className="link link-blue"
@@ -500,7 +500,7 @@ const Register = ({
               >
                 Sign In
               </a>
-            </p>
+            </p> */}
           </>
         )}
       </Modal.Body>
