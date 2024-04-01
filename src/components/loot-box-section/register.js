@@ -274,9 +274,10 @@ const Register = ({
               {`You're just a step away from accessing a world of unique NFTs!`}
             </p>
 
-            <p className="mb-4">
+            {/* <p className="mb-4">
               Please{" "}
               <a
+                href="#"
                 className="link link-blue"
                 onClick={() =>
                   toggleModal(MODAL_TYPES.LOGIN_WITH_PASSWORD, {
@@ -288,7 +289,7 @@ const Register = ({
                 login{" "}
               </a>{" "}
               to continue{" "}
-            </p>
+            </p> */}
           </div>
         ) : (
           <>
