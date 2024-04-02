@@ -115,15 +115,15 @@ function App(props) {
     window.addEventListener("offline", (event) => {
       setOnline(navigator.onLine);
     });
-    handleMenuVisibility();
+    // handleMenuVisibility();
     // getServerTime();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const handleMenuVisibility = () => {
-    let hideMenus = params.get("hideMenus");
-    setHideMenus(hideMenus === "true");
-  };
+  // const handleMenuVisibility = () => {
+  //   // let hideMenus = params.get("hideMenus");
+  //   // setHideMenus(hideMenus === "true");
+  // };
 
   return (
     <>
