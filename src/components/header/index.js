@@ -64,7 +64,7 @@ const Header = ({
       // setIsLive(true);
       dispatch(market_live_thunk());
     } else {
-      set_market_time(market_start_date_utc);
+      // set_market_time(market_start_date_utc);
     }
   };
 
