@@ -1,10 +1,10 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Modal } from "react-bootstrap";
 
 import one from "../../images/drops/animation_box.gif";
 import two from "../../images/drops/treasure_3.jpg";
 import { currencyFormat } from "./../../utils/common";
-import { treasureList, treasureClaim } from "../../api/base-methods";
+import { treasureList } from "../../api/base-methods";
 import NFTCounter from "../nft-counter";
 
 import tesla from "../../images/treasure/tesla.gif";
