@@ -66,7 +66,7 @@ const Footer = () => {
           className="social_link"
           rel="nofollow noopener"
         >
-          <img src={dc} className="change-my-color" />
+          <img src={dc} className="change-my-color" alt="" />
         </a>
         <a
           href="https://www.instagram.com/jumptradenft/"
@@ -74,7 +74,7 @@ const Footer = () => {
           className="social_link"
           rel="nofollow noopener"
         >
-          <img src={ig} className="change-my-color" />
+          <img src={ig} className="change-my-color" alt="" />
         </a>
         <a
           href="https://twitter.com/Jumptradenft"
@@ -82,7 +82,7 @@ const Footer = () => {
           className="social_link"
           rel="nofollow noopener"
         >
-          <img src={tw} className="change-my-color" />
+          <img src={tw} className="change-my-color" alt="" />
         </a>
       </div>
       <footer className="ck-footer">
@@ -93,7 +93,7 @@ const Footer = () => {
                 <h4>BECOME A PART OF THE COMMUNITY</h4>
                 <h2>BEGIN A CONVERSATION</h2>
                 <span className="discord-name">
-                  <img src={dc} className="change-my-color" />
+                  <img src={dc} className="change-my-color" alt="" />
                   <a
                     href="https://discord.com/invite/JRWmNb38GW"
                     className="twitter-link"
@@ -183,7 +183,7 @@ const Footer = () => {
                     className="social_link"
                     rel="nofollow noopener"
                   >
-                    <img src={dc} className="change-my-color" />
+                    <img src={dc} className="change-my-color" alt="" />
                   </a>
                   <a
                     href="https://www.instagram.com/jumptradenft/"
@@ -191,7 +191,7 @@ const Footer = () => {
                     className="social_link"
                     rel="nofollow noopener"
                   >
-                    <img src={ig} className="change-my-color" />
+                    <img src={ig} className="change-my-color" alt="" />
                   </a>
                   <a
                     href="https://twitter.com/Jumptradenft"
@@ -199,7 +199,7 @@ const Footer = () => {
                     className="social_link"
                     rel="nofollow noopener"
                   >
-                    <img src={tw} className="change-my-color" />
+                    <img src={tw} className="change-my-color" alt="" />
                   </a>
                 </div>
               </div>
@@ -245,7 +245,7 @@ const Footer = () => {
             </div>
             <div className="col-6 col-sm-6 col-md-3 offset-md-4 order-md-2 order-sm-2 order-2">
               <div className="footer-logo">
-                <img src={logo} />
+                <img src={logo} alt="" />
               </div>
             </div>
           </div>

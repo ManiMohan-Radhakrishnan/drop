@@ -94,8 +94,8 @@ const NftCollectionVideo = () => {
                     <a href={"/guaranteed-gift-box"}>
                       <span className="tressure">
                         {" "}
-                        <img src={tresureBoxImage} /> &nbsp; 1 FREE TREASURE BOX{" "}
-                        <BsInfoCircle />
+                        <img alt="" src={tresureBoxImage} /> &nbsp; 1 FREE
+                        TREASURE BOX <BsInfoCircle />
                       </span>
                     </a>
                   </h5>

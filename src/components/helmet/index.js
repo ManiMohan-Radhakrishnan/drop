@@ -102,6 +102,7 @@ const AppHelmet = ({
             width="1"
             style={{ display: "none" }}
             src="https://q.quora.com/_/ad/872682fdaae44295a53167a1dfa7b9f4/pixel?tag=ViewContent&noscript=1"
+            alt=""
           />
         </noscript>
       </head>

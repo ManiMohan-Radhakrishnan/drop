@@ -235,7 +235,7 @@ const MyTreasureBox = ({ started = true }) => {
                             </div>
                           ) : (
                             <div className="gift_info">
-                              <img src={two} />
+                              <img src={two} alt="" />
                               <div className="navigate-info">
                                 Something Better Awaits... but not in here!
                               </div>
@@ -244,7 +244,7 @@ const MyTreasureBox = ({ started = true }) => {
                         </>
                       ) : (
                         <div className="gift_info">
-                          <img src={one} />
+                          <img src={one} alt="" />
                           <p>
                             {getEndTime(obj.expire_at) > getNow() ? (
                               <>

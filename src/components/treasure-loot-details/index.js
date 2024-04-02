@@ -123,7 +123,10 @@ const TreasureLootDetails = ({ started = true }) => {
                     muted
                     autoPlay
                     src="https://cdn.beyondlife.club/media/mail/treasure_video.mp4"></video> */}
-                  <img src="https://cdn.guardianlink.io/product-hotspot/images/raddx/Raddx-Treasure-box.jpg" />
+                  <img
+                    alt=""
+                    src="https://cdn.guardianlink.io/product-hotspot/images/raddx/Raddx-Treasure-box.jpg"
+                  />
                 </div>
               </div>
               <div className="col-md-12">

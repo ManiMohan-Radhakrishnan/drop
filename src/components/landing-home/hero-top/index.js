@@ -64,7 +64,7 @@ const HeroTop = ({ hide = true }) => {
             <div className="col-sm-12">
               <div className="hero-block">
                 <div className="ck-logo">
-                  <img src={logo} />
+                  <img src={logo} alt="" />
                 </div>
                 {innerWidth > 1023 && (
                   <div className="scaleDown desktop-content">

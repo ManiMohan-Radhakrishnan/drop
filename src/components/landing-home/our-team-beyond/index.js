@@ -21,13 +21,32 @@ const OurTeamBeyond = () => {
                 src="https://www.guardianlink.io/academy/wp-content/uploads/2022/03/PngItem_5363354.png"
                 className="invert-reverse"
               /> */}
-              <img src="https://cdn.guardianlink.io/product-hotspot/images/raddx/partners_polygon.png" />
-              <img src="https://cdn.guardianlink.io/product-hotspot/images/raddx/partners_flipkart.png" />
-              <img src="https://cdn.guardianlink.io/product-hotspot/images/raddx/partners_pepsi.png" />
+
+              <img
+                alt=""
+                src="https://cdn.guardianlink.io/product-hotspot/images/raddx/partners_polygon.png"
+              />
+              <img
+                alt=""
+                src="https://cdn.guardianlink.io/product-hotspot/images/raddx/partners_flipkart.png"
+              />
+              <img
+                alt=""
+                src="https://cdn.guardianlink.io/product-hotspot/images/raddx/partners_pepsi.png"
+              />
               {/* <img src="https://cdn.guardianlink.io/product-hotspot/images/raddx/partners_binance.png" /> */}
-              <img src="https://cdn.guardianlink.io/product-hotspot/images/raddx/partners_mondelez.png" />
-              <img src="https://cdn.guardianlink.io/product-hotspot/images/raddx/partners_twitter.png" />
-              <img src="https://cdn.guardianlink.io/product-hotspot/images/raddx/partners_viacom.png" />
+              <img
+                alt=""
+                src="https://cdn.guardianlink.io/product-hotspot/images/raddx/partners_mondelez.png"
+              />
+              <img
+                alt=""
+                src="https://cdn.guardianlink.io/product-hotspot/images/raddx/partners_twitter.png"
+              />
+              <img
+                alt=""
+                src="https://cdn.guardianlink.io/product-hotspot/images/raddx/partners_viacom.png"
+              />
             </div>
           </div>
         </div>

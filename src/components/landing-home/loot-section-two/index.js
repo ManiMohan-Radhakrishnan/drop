@@ -337,7 +337,10 @@ const LootSectionTwo = ({
                     <li>
                       <div className="digiland-info-block">
                         <div className="img-block">
-                          <img src="https://cdn.guardianlink.io/product-hotspot/images/raddx/raddx-digitalland-host.png"></img>
+                          <img
+                            alt=""
+                            src="https://cdn.guardianlink.io/product-hotspot/images/raddx/raddx-digitalland-host.png"
+                          ></img>
                         </div>
                         <div className="content-block">
                           <h5>Host</h5>
@@ -366,7 +369,10 @@ const LootSectionTwo = ({
                     <li>
                       <div className="digiland-info-block">
                         <div className="img-block">
-                          <img src="https://cdn.guardianlink.io/product-hotspot/images/raddx/raddx-digitalland-unknown.png"></img>
+                          <img
+                            alt=""
+                            src="https://cdn.guardianlink.io/product-hotspot/images/raddx/raddx-digitalland-unknown.png"
+                          ></img>
                         </div>
                         <div className="content-block">
                           <h5>Monetize</h5>
@@ -380,7 +386,10 @@ const LootSectionTwo = ({
                     <li>
                       <div className="digiland-info-block">
                         <div className="img-block">
-                          <img src="https://cdn.guardianlink.io/product-hotspot/images/raddx/raddx-digitalland-trade.png"></img>
+                          <img
+                            alt=""
+                            src="https://cdn.guardianlink.io/product-hotspot/images/raddx/raddx-digitalland-trade.png"
+                          ></img>
                         </div>
                         <div className="content-block">
                           <h5>Trade</h5>
@@ -395,7 +404,10 @@ const LootSectionTwo = ({
                     <li>
                       <div className="digiland-info-block">
                         <div className="img-block">
-                          <img src="https://cdn.guardianlink.io/product-hotspot/images/raddx/raddx-digitalland-connect.png"></img>
+                          <img
+                            alt=""
+                            src="https://cdn.guardianlink.io/product-hotspot/images/raddx/raddx-digitalland-connect.png"
+                          ></img>
                         </div>
                         <div className="content-block">
                           <h5>Connect</h5>
@@ -410,7 +422,10 @@ const LootSectionTwo = ({
                     <li>
                       <div className="digiland-info-block">
                         <div className="img-block">
-                          <img src="https://cdn.guardianlink.io/product-hotspot/images/raddx/raddx-digitalland-rentals.png"></img>
+                          <img
+                            alt=""
+                            src="https://cdn.guardianlink.io/product-hotspot/images/raddx/raddx-digitalland-rentals.png"
+                          ></img>
                         </div>
                         <div className="content-block">
                           <h5>Rentals</h5>

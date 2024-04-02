@@ -604,7 +604,7 @@ const NewDropsTemp2 = ({
                             >
                               <div class="p-2 d-flex flex-btnn align-self-start">
                                 <div className="btn-click-icon">
-                                  <img src={playBtn} />
+                                  <img src={playBtn} alt="" />
                                 </div>
                                 <div className="btn-click ms-md-3 ms-0 fs-5">
                                   <span>Explore Marketplace</span>
@@ -619,7 +619,7 @@ const NewDropsTemp2 = ({
                             >
                               <div class="p-2 d-flex flex-btnn align-self-start">
                                 <div className="btn-click-icon">
-                                  <img src={playBtn} />
+                                  <img src={playBtn} alt="" />
                                 </div>
                                 <div className="btn-click ms-md-3 ms-0 fs-5">
                                   <a
@@ -638,7 +638,7 @@ const NewDropsTemp2 = ({
                             <a className="list-style-none p-8">
                               <div class="p-2 d-flex flex-btnn align-self-start">
                                 <div className="btn-click-icon">
-                                  <img src={playBtn} />
+                                  <img src={playBtn} alt="" />
                                 </div>
                                 <div className="btn-click ms-md-3 ms-0 fs-5">
                                   <a
@@ -1545,6 +1545,7 @@ const NewDropsTemp2 = ({
                 <div className="cong_box">
                   <h3>Congratulations!!</h3>
                   <img
+                    alt=""
                     loop
                     muted
                     autoPlay

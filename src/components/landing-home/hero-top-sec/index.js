@@ -24,7 +24,7 @@ const HeroTopSec = () => {
             <div className="col-sm-12">
               <div className="hero-block">
                 <div className="ck-logo">
-                  <img src={logo} />
+                  <img src={logo} alt="" />
                 </div>
                 <div className=" desktop-content">
                   <img src={HeroImage} alt="HeroImage" />

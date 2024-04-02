@@ -78,7 +78,7 @@ function ReactGoogleLogin(props) {
           className="login-with-btn"
           type="button"
         >
-          <img src={google}></img>
+          <img src={google} alt=""></img>
         </button>
       </div>
     </>

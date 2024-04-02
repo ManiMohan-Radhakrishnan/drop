@@ -260,7 +260,7 @@ const DropCard = ({
                   >
                     {/* <ARIcon /> */}
                     <div className="btnImgBlock">
-                      <img src={Image360} />
+                      <img src={Image360} alt="" />
                     </div>
                   </Link>
                 )}

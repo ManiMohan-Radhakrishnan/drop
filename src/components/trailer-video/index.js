@@ -121,7 +121,7 @@ const TrailerVideo = () => {
                         >
                           <div class="p-2 d-flex flex-btnn align-self-start">
                             <div className="btn-click-icon">
-                              <img src={playBtn} />
+                              <img src={playBtn} alt="" />
                             </div>
                             <div className="btn-click ms-md-3 ms-0 fs-2">
                               <span>Explore Marketplace</span>
@@ -136,7 +136,7 @@ const TrailerVideo = () => {
                         >
                           <div class="p-2 d-flex flex-btnn align-self-start">
                             <div className="btn-click-icon">
-                              <img src={playBtn} />
+                              <img src={playBtn} alt="" />
                             </div>
                             <div className="btn-click ms-md-3 ms-0 fs-2">
                               {/* <p className="coming_soon">Coming Soon</p> */}
@@ -182,7 +182,7 @@ const TrailerVideo = () => {
                         <a className="list-style-none p-8">
                           <div class="p-2 d-flex flex-btnn align-self-start">
                             <div className="btn-click-icon">
-                              <img src={playBtn} />
+                              <img src={playBtn} alt="" />
                             </div>
                             <div className="btn-click ms-md-3 ms-0 fs-2">
                               <a

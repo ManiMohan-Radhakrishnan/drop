@@ -167,6 +167,7 @@ const BannerSection = ({ exe_scroll_two, hideMenus = false }) => {
                 src={
                   "https://cdn.guardianlink.io/product-hotspot/images/raddx/Jump-Page_Raddx-banner_Front-left.webp"
                 }
+                alt=""
               />
             </div>
             <div className="img-block right">
@@ -184,6 +185,7 @@ const BannerSection = ({ exe_scroll_two, hideMenus = false }) => {
                   src={
                     "https://cdn.guardianlink.io/product-hotspot/images/raddx/Jump-Page_Raddx-banner_Front.webp"
                   }
+                  alt=""
                 />
               </a>
             </div>
