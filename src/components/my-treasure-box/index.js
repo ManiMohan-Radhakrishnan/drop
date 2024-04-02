@@ -171,6 +171,7 @@ const MyTreasureBox = ({ started = true }) => {
                                   <img
                                     src={obj.nft_image}
                                     className="png-shadow"
+                                    alt=""
                                   />
                                 </>
                               ) : (
@@ -178,6 +179,7 @@ const MyTreasureBox = ({ started = true }) => {
                                   <img
                                     src={getLogo(obj.assert_name)}
                                     className="png-shadow"
+                                    alt=""
                                   />
                                 </>
                               )}
