@@ -20,7 +20,7 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 const MyTreasureBox = ({ started = true }) => {
-  const r_email = useRef(null);
+  // const r_email = useRef(null);
   const state = useSelector((state) => state);
 
   const { user } = state;
@@ -56,7 +56,7 @@ const MyTreasureBox = ({ started = true }) => {
 
   const handleClaimTreasure = async (slug) => {
     try {
-      const result = await treasureClaim(slug.slug, "5Ew94W79IYgvxkDb");
+      // const result = await treasureClaim(slug.slug, "5Ew94W79IYgvxkDb");
       getTreasureList();
       // toast.success("UnBoxed successfully");
     } catch (error) {
