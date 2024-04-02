@@ -10,6 +10,7 @@ import { FaDiscord } from "react-icons/fa";
 import depositIcon from "../../images/deposit.svg";
 import bidIcon from "../../images/bid.svg";
 import buyIcon from "../../images/buy.svg";
+import NFTCounter from "../nft-counter";
 import outbidIcon from "../../images/outbid.svg";
 import moneyWithdraw from "../../images/withdraw-money.svg";
 import userImg from "../../images/user_1.png";
@@ -33,6 +34,9 @@ const Header = ({
 }) => {
   const market_start_date = "Jan 26, 2022 03:30:00";
 
+  const [market_time, set_market_time] = useState();
+
+  const history = useHistory();
   const t = useTranslation();
   const dispatch = useDispatch();
   const state = useSelector((state) => state);
@@ -64,7 +68,7 @@ const Header = ({
       // setIsLive(true);
       dispatch(market_live_thunk());
     } else {
-      // set_market_time(market_start_date_utc);
+      set_market_time(market_start_date_utc);
     }
   };
 
@@ -565,7 +569,11 @@ const Header = ({
 
   return (
     <>
-      <div style={{ display: "none" }}></div>
+      <div style={{ display: "none" }}>
+        {market_time && (
+          <NFTCounter time={market_time} handleEndEvent={handleCheck} />
+        )}
+      </div>
       {ribbon && (
         <div className="top_bar">
           <div className="alert_box">

@@ -1,0 +1,210 @@
+@import "../../styles/common";
+
+.bid-history {
+  border-radius: 8px;
+  box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+  overflow: hidden;
+
+  .history-end-content {
+    font-weight: 600;
+    color: #9c9c9b;
+    font-size: 0.9rem;
+    text-align: center;
+    flex: 1;
+  }
+
+  .bid-history-title-content {
+    padding: 0.6rem 1.5rem;
+    background-color: #48094c;
+    display: flex;
+    justify-content: space-between;
+
+    .bid-history-title {
+      font-weight: 600;
+      font-size: 1.5rem;
+      color: #fff;
+    }
+
+    .bid-history-filter {
+      display: flex;
+      align-items: center;
+
+      .history-dropdown {
+        a.dropdown-toggle {
+          color: white;
+          font-weight: 400;
+          font-size: 0.9rem;
+        }
+        .dropdown-menu {
+          min-width: 1rem !important;
+        }
+      }
+    }
+  }
+
+  .bid-history-content {
+    min-height: calc(100vh - 10rem) !important;
+    max-height: 65vh;
+    border-left: 2px solid #48094c;
+    border-right: 2px solid #48094c;
+    border-bottom: 2px solid #48094c;
+    overflow: hidden;
+    overflow-y: auto;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+
+    .bid-histroy-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 0;
+      border-bottom: 1px solid #e7e7e9;
+      margin: 0 2rem;
+
+      .first-half {
+        display: flex;
+        align-items: center;
+
+        img {
+          height: 3rem;
+          width: 3rem;
+          object-fit: cover;
+          border-radius: 50%;
+          margin-right: 1rem;
+          background-color: #ccc;
+        }
+
+        .time {
+          font-size: 1rem;
+          font-weight: 600;
+        }
+
+        .bid-owner {
+          font-size: 1.5rem;
+          font-weight: 800;
+
+          .owner-id {
+            cursor: pointer;
+
+            &:hover {
+              color: #000 !important;
+            }
+          }
+        }
+      }
+
+      .second-half {
+        .bid-value {
+          font-size: 1.5rem;
+          font-weight: 800;
+        }
+      }
+    }
+  }
+
+  .bid-empty-content {
+    background-color: #000;
+    min-height: 65vh;
+    max-height: 65vh;
+    margin-top: -1px;
+    padding: 1rem;
+    border-left: 2px solid #48094c;
+    border-right: 2px solid #48094c;
+    border-bottom: 2px solid #48094c;
+
+    .empty-top-container {
+      color: #fff;
+      display: flex;
+      height: 50vh;
+
+      .empty-top-content {
+        flex: 1;
+        align-self: center;
+        text-align: center;
+
+        svg {
+          font-size: 3rem;
+          margin-bottom: 2rem;
+        }
+        .empty-text {
+          font-weight: 600;
+          font-size: 1.7rem;
+        }
+      }
+    }
+
+    .empty-bottom-content {
+      position: sticky;
+      top: 100vh;
+      display: flex;
+      background-color: #fff;
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+      align-items: center;
+
+      img {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        margin-right: 1rem;
+      }
+
+      .publish-time {
+        font-size: 0.8rem;
+        font-weight: 600;
+      }
+
+      .nft-owner {
+        font-size: 1rem;
+        font-weight: 800;
+
+        span {
+          cursor: pointer;
+
+          &:hover {
+            color: #000 !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.time {
+  font-size: 1rem;
+  font-family: "proxima-nova" !important;
+  .expire-pill {
+    padding: 0.1rem 0.5rem;
+    background-color: #e51e61;
+    color: #fff;
+    border-radius: 0.3rem;
+    margin-left: 0.5rem;
+    font-size: 0.6rem;
+    white-space: nowrap;
+    @media screen and (max-width: 767px) {
+      margin-left: 0;
+    }
+    &.active {
+      background-color: #4caf50;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+}
+
+.load-more-row {
+  padding: 0.3rem !important;
+  font-size: 0.56rem;
+}
+
+.bid-expire-cntent {
+  font-family: $proxima-nova;
+  font-size: 1rem;
+  color: red;
+  display: flex;
+  align-items: center;
+}

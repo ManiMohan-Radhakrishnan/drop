@@ -23,8 +23,26 @@ import "./App.css";
 // import Stop from "./components/stop";
 import { FaTimes } from "react-icons/fa";
 import { useQuery } from "./hook/url-params";
+// import Drop from "./pages/drop";
 
-const Home = lazy(() => import("./pages/home"));
+const NewHome = lazy(() => import("./pages/new-home"));
+const Explore = lazy(() => import("./pages/explore-list"));
+const Loot = lazy(() => import("./pages/loot"));
+const Drop = lazy(() => import("./pages/drop"));
+const LootDetail = lazy(() => import("./pages/loot-detail"));
+const ChildNFTDetail = lazy(() => import("./pages/child-nft-details"));
+const TreasureBox = lazy(() => import("./pages/treasure-box"));
+const NotFound = lazy(() => import("./pages/not-found"));
+const Details = lazy(() => import("./pages/details"));
+const TreasureBoxDetails = lazy(() => import("./pages/treasure-box-details"));
+const Privacy = lazy(() => import("./pages/privacy-policy"));
+const Terms = lazy(() => import("./pages/terms"));
+const FAQ = lazy(() => import("./pages/faq"));
+// const Drop = lazy(() => import("./pages/drop"));
+
+const NftDetails = lazy(() => import("./pages/nft-details"));
+
+const BrandEnquiry = lazy(() => import("./pages/brand-enquiry"));
 
 function App(props) {
   const dispatch = useDispatch();
@@ -33,6 +51,7 @@ function App(props) {
   const [diffTimerSeconds, setDiffTimerSeconds] = useState(0);
 
   const params = useQuery(window.location.search);
+  const [hideMenus, setHideMenus] = useState(false);
 
   const { lang, user } = useSelector((state) => state);
 
@@ -115,15 +134,15 @@ function App(props) {
     window.addEventListener("offline", (event) => {
       setOnline(navigator.onLine);
     });
-    // handleMenuVisibility();
+    handleMenuVisibility();
     // getServerTime();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // const handleMenuVisibility = () => {
-  //   // let hideMenus = params.get("hideMenus");
-  //   // setHideMenus(hideMenus === "true");
-  // };
+  const handleMenuVisibility = () => {
+    let hideMenus = params.get("hideMenus");
+    setHideMenus(hideMenus === "true");
+  };
 
   return (
     <>
@@ -167,7 +186,81 @@ function App(props) {
             }
           >
             <Switch>
-              <Route exact path="/new" component={Home} />
+              {/* <Route exact path="/details/:slug" component={NftDetails} /> */}
+
+              <Route
+                exact
+                path="/details/:slug"
+                render={() => <NftDetails hideMenus={hideMenus} />}
+              />
+              <Route
+                exact
+                path="/details/:slug/:placebid"
+                component={NftDetails}
+              />
+
+              {/* <Route
+                exact
+                path="/nft-marketplace/details/:slug"
+                component={NftDetails}
+              /> */}
+              <Route exact path="/explore/loot/:slug" component={Loot} />
+
+              {/* <Redirect exact path="/explore/loot/:slug" to="/" /> */}
+              <PrivateRoute
+                exact
+                path="/loot/nft/detail/:slug"
+                component={LootDetail}
+              />
+              <PrivateRoute
+                exact
+                path="/details/child/nft/:slug"
+                component={ChildNFTDetail}
+              />
+
+              {/* <Route exact path="/explore/loot/:slug" component={Stop} /> */}
+              {/* <PrivateRoute
+                exact
+                path="/loot/nft/detail/:slug"
+                component={Stop}
+              /> */}
+              {/* <Route
+                exact
+                path="/explore/category/:name/:slug"
+                component={Explore}
+              />
+              <Route
+                exact
+                path="/guaranteed-gift-box"
+                component={ChakraDetails}
+              /> */}
+              <PrivateRoute
+                exact
+                path="/my-treasure-box"
+                component={TreasureBox}
+              />
+              <Route
+                exact
+                path="/guaranteed-gift-box"
+                render={() => <TreasureBoxDetails hideMenus={hideMenus} />}
+              />
+              {/* <Route exact path="/mcl" component={Drop} /> */}
+
+              <Route exact path="/brand-enquiry" component={BrandEnquiry} />
+              <Route
+                exact
+                path="/"
+                render={() => <Drop hideMenus={hideMenus} />}
+              />
+              <Route exact path="/privacy-policy" component={Privacy} />
+              <Route exact path="/faq" component={FAQ} />
+              <Route exact path="/terms-and-conditions" component={Terms} />
+
+              {/* <Route exact path="/" component={Stop} /> */}
+
+              {/* <Route exact path="/new" component={Home} /> */}
+              <Route path="/not-found" component={NotFound} />
+              <Route exact component={NotFound} />
             </Switch>
           </Suspense>
         </Router>

@@ -2,6 +2,8 @@ import React from "react";
 import dayjs from "dayjs";
 import { useHistory } from "react-router";
 
+import NFTCounter from "./../nft-counter";
+
 const NFTDrops = ({
   time,
   label,
@@ -48,7 +50,11 @@ const NFTDrops = ({
               {isEnded ? (
                 <>{time && dayjs(time).format("DD. MM. YYYY")}</>
               ) : (
-                <></>
+                <NFTCounter
+                  time={time}
+                  cTime={cTime}
+                  timeclassName="font-onesevenrem"
+                />
               )}
             </h3>
           </div>

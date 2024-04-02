@@ -13,7 +13,7 @@ export const validateEmail = (email) => {
 };
 
 export const validateUpi = (upi) => {
-  const re = /^[\w.-]{3,}@[a-zA-Z]{3,}/;
+  const re = /^[\w\.\-_]{3,}@[a-zA-Z]{3,}/;
   return re.test(upi);
 };
 

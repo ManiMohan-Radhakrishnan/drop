@@ -1,0 +1,80 @@
+@import "../../../styles/common";
+
+.play-section {
+  background: url("https://cdn.guardianlink.io/product-hotspot/images/RADDX_video_banner_desktop_v2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  overflow: hidden;
+  @media screen and (max-width: 1023px) {
+    min-height: 80vh;
+  }
+  .rollingText,
+  .rollingText02 {
+    font-size: 4.5rem;
+    display: inline-block;
+    font-family: $nunito-sans;
+    color: var(--ck-theme);
+    text-transform: uppercase;
+    opacity: 0.9;
+  }
+
+  .wrapperRollingText02 {
+    white-space: nowrap;
+    margin-top: 1rem;
+    text-align: right;
+    padding-right: 1.5rem;
+    @media screen and (max-width: 680px) {
+      text-align: center;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+  .wrapperRollingText {
+    white-space: nowrap;
+    margin-top: 2rem;
+    text-align: left;
+    padding-left: 1.5rem;
+    @media screen and (max-width: 680px) {
+      text-align: center;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+}
+
+.marque-block {
+  background: #ea337f;
+  margin-top: 8rem;
+  @media screen and (max-width: 767px) {
+    margin-top: 15rem;
+  }
+  .marquee {
+    font-family: var(--impact);
+    font-weight: 600;
+    color: #000;
+    font-size: 1rem;
+    align-items: center;
+    letter-spacing: 0.3rem;
+    padding: 0.2rem 0.2rem;
+  }
+  .overlay {
+    display: none;
+  }
+}
+
+.mobile-fix {
+  div {
+    display: block;
+    text-align: center;
+    line-height: 2rem;
+  }
+  span {
+    font-size: 4rem;
+    line-height: 1.3;
+    @media screen and (max-width: 991px) {
+      font-size: 2.5rem;
+    }
+  }
+}
